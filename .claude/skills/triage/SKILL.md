@@ -84,6 +84,12 @@ closed and what to do if they disagree.
   new issue with details on a current version. Never say "fixed".
 - For `wontfix`, quote or paraphrase the maintainer decision and name who made
   it. Do not editorialize.
+- For a feature request being closed as not planned, push back: say why lnd
+  does not do it and, when true, that the functionality belongs at the
+  application level using what lnd already exposes. Name the existing RPCs or
+  commands the reporter can use today. Do not end with "please open a new
+  issue"; that ending is only for `not-reproducible`, where new details could
+  change the outcome.
 - No boilerplate, no apology, no thanks-for-your-patience filler.
 
 Before finishing a verdict, reread the draft as the reporter would. If it
