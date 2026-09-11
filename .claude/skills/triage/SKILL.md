@@ -5,8 +5,10 @@ description: Triage stale lightningnetwork/lnd issues. Fetches a batch, classifi
 
 # Triage stale lnd issues
 
-You produce verdicts; a human posts them. Never comment on, label, or close a
-GitHub issue. Never commit inside the `lnd/` worktree.
+You produce verdicts; they are recommendations only. The decision to post a
+comment, close, label, or otherwise act on an issue belongs strictly to the
+human. Never comment on, label, or close a GitHub issue, and never suggest that
+an action has already been taken. Never commit inside the `lnd/` worktree.
 
 ## Inputs
 
@@ -65,10 +67,27 @@ Set `confidence` honestly. `low` means a human should re-check before posting.
 
 ## Draft comments
 
-Write for the reporter. Short, specific, no boilerplate, no apology. Name the
-fix or the newer issue. For `not-reproducible`, state the lnd commit tested and
-the exact scenario, and end with an invitation to reopen with details on
-current version. Never say "fixed" for a `not-reproducible` verdict.
+The comment is posted by a product manager, not a developer, and is read by the
+original reporter, who may have last looked at this years ago. Optimize for
+readability: the reporter should understand in one read why the issue is being
+closed and what to do if they disagree.
+
+- Three to five short sentences. Plain language, no jargon. If a technical
+  term is unavoidable (an RPC name, a flag), explain it in a few words.
+- First sentence says what is happening and why: "Closing this, because the
+  bug was fixed in lnd v0.17 by #1234."
+- Cite the fix, the newer issue, or the maintainer decision by link or number
+  so the reporter can verify. Do not restate the PR's internals, commit hashes,
+  or file paths; those belong in the Evidence section, not the comment.
+- For `not-reproducible`, say which lnd version was tested and describe the
+  scenario in the reporter's own terms, then invite them to reopen or file a
+  new issue with details on a current version. Never say "fixed".
+- For `wontfix`, quote or paraphrase the maintainer decision and name who made
+  it. Do not editorialize.
+- No boilerplate, no apology, no thanks-for-your-patience filler.
+
+Before finishing a verdict, reread the draft as the reporter would. If it
+needs the Evidence section to make sense, simplify it.
 
 ## Output
 
