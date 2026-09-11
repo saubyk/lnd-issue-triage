@@ -1,0 +1,5 @@
+# lnd worktree used for build/test reproduction; not part of this repo
+/lnd/
+# raw fetched issue JSON (regenerable)
+/batches/*.json
+/batches/*/raw/

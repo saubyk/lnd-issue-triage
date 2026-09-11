@@ -1,0 +1,6 @@
+{
+  "repo": "lightningnetwork/lnd",
+  "lnd_path": "./lnd",
+  "default_query": "is:issue is:open updated:<2024-01-01",
+  "batch_size": 25
+}
